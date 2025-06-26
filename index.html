@@ -16,8 +16,8 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
-      background: linear-gradient(to bottom, #66ccff 0%, #003366 100%);
-      color: #fff;
+      background: linear-gradient(to bottom, #0099cc 0%, #66ccff 100%);
+      color: #000;
     }
     .container {
       width: 95%;
@@ -25,51 +25,46 @@
       margin: 0 auto;
     }
     .header {
-      padding: 20px 0;
+      background: #003366;
+      color: white;
+      padding: 15px 0;
     }
     .logo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      text-align: center;
     }
     .logo img {
-      width: 80px;
+      width: 100px;
+      margin-bottom: 10px;
     }
     .pdf-buttons {
-      display: flex;
-      gap: 10px;
+      margin-top: 10px;
     }
-    .pdf-btn {
+    .pdf-btn, .login-btn {
       background: #ffffff;
       color: #003366;
       padding: 5px 10px;
       text-decoration: none;
       border-radius: 5px;
-      font-weight: bold;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      justify-content: flex-end;
-    }
-    .menu a {
-      color: #fff;
-      text-decoration: none;
+      margin-right: 5px;
     }
     .hero {
+      color: white;
       text-align: center;
-      padding: 100px 20px 60px;
-      background: transparent;
+      padding: 30px 20px 50px;
     }
-    .hero h2 {
-      font-size: 26px;
+    .slogan {
       margin-top: 40px;
+      font-size: 22px;
+      font-weight: bold;
     }
-    .about, .levels, .why, .rules, .call, .details {
+    .about, .levels, .why, .call, .details, .rules, .summary {
       padding: 40px 20px;
-      background: #f5f5f5;
-      color: #000;
+      background: rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
+      border-radius: 10px;
     }
     table {
       width: 100%;
@@ -96,21 +91,20 @@
       font-size: 24px;
       animation: blink 1s infinite;
     }
-    .footer {
-      padding: 30px 20px;
+    .footer-links {
       text-align: center;
-      background: #002244;
-      color: white;
+      margin-top: 30px;
     }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 10px;
-    }
-    .social-icons a {
-      color: white;
+    .footer-links a {
+      margin: 0 10px;
+      color: #fff;
       font-size: 24px;
+    }
+    .copyright {
+      text-align: center;
+      font-size: 14px;
+      color: #eee;
+      margin-top: 10px;
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
@@ -120,106 +114,108 @@
 </head>
 <body>
 
+  <!-- Bouton Telegram service client -->
   <a href="https://t.me/oceanmoney" class="telegram-button" title="Service client Telegram">
     <i class="fab fa-telegram-plane"></i>
   </a>
 
+  <!-- En-tête -->
   <header class="header">
     <div class="container">
       <div class="logo">
         <img src="logo.png" alt="Océan Money" />
+        <h1>Océan Money</h1>
         <div class="pdf-buttons">
           <a href="pdf/oceanmoney-fr.pdf" class="pdf-btn">PDF Français</a>
           <a href="pdf/oceanmoney-en.pdf" class="pdf-btn">PDF Anglais</a>
+          <a href="#" class="login-btn">Se connecter</a>
         </div>
-        <ul class="menu">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">S’inscrire</a></li>
-          <li><a href="#">Se connecter</a></li>
-        </ul>
       </div>
     </div>
   </header>
 
+  <!-- Slogan -->
   <section class="hero">
-    <h2>Océan Money est un projet MLM qui vous permet de nager vers la liberté financière intelligemment.<br />Avec Océan Money, tout le monde a la même chanson.</h2>
+    <p class="slogan">Océan Money est un projet MLM qui vous permet de nager vers la liberté financière intelligemment.<br/>Avec Océan Money, tout le monde a la même chance.</p>
   </section>
 
-</section>
-<!-- Pourquoi choisir Océan Money -->
-  <section class="why">
-    <div class="container">
-      <h2>Pourquoi choisir Océan Money ?</h2>
-      <p>
-        Océan Money est un projet 100 % automatisé grâce à la puissance de la blockchain. Chaque paiement est instantané, direct, sans attente ni intervention humaine. Il n’y a aucun DG, aucun intermédiaire : tout le monde a la même chance.
-        Vous travaillez une seule fois, et le système continue à générer des revenus pour vous de manière illimitée.
-        À l’ère du numérique, nous dépensons des fortunes en connexions, téléphones et gadgets… souvent sans retour.
-        Océan Money change la donne : avec les bonnes stratégies, vous avez un <strong>moyen sûr de gagner de l’argent en ligne</strong>. Il est temps de rejoindre <strong>la nouvelle génération des intelligents financiers</strong>.
-      </p>
-    </div>
-  </section>
-  
+  <!-- À propos déplacé plus bas -->
   <section class="about">
     <div class="container">
       <h2>À propos du projet</h2>
-      <p><strong>Océan Money</strong> est un projet 100% basé sur la blockchain qui permet à chaque personne connectée à Internet de créer des revenus automatiques sans intermédiaire, ni manipulation. Grâce à un smart contract parfaitement codé, chaque paiement se fait de façon directe et transparente.</p>
-      <p>Nous sommes dans un monde en pleine mutation où l’intelligence artificielle, la blockchain et les crypto-monnaies bouleversent l’économie mondiale. Ceux qui ne s’adaptent pas comme Nokia à l’époque des Android, prennent un retard immense. Le monde évolue. Adaptons-nous.</p>
+      <p><strong>Océan Money</strong> est un projet 100% basé sur la blockchain ou l'inscription coûte 0,0087 BNB (5$) qui permet à chaque personne connectée à Internet de créer des revenus automatiques sans intermédiaire, ni manipulation. Grâce à un smart contract parfaitement codé, chaque paiement se fait de façon directe et transparente.</p>
+      <p>Nous sommes dans un monde en pleine mutation où l’intelligence artificielle, la blockchain et les crypto-monnaies bouleversent l’économie mondiale. Ceux qui ne s’adaptent pas comme Nokia à l’époque ou les Androids ont fait leur apparition, prennent un retard immense. Le monde évolue. Adaptons-nous.</p>
     </div>
   </section>
 
+  <!-- Explication simple du projet -->
   <section class="why">
     <div class="container">
-      <h2>Pourquoi choisir Océan Money ?</h2>
-      <p>Océan Money est une opportunité accessible à tous, transparente et fiable. Grâce à notre système automatisé sur la blockchain, vous recevez vos gains directement, sans passer par un administrateur ou une entreprise. Le système est décentralisé, tout est contrôlé par un contrat intelligent immuable.</p>
+      <h2>Pourquoi Océan Money ?</h2>
+      <p>Océan Money est un bon projet révolutionnaire qui permet à toute personne de gagner de l’argent en invitant simplement d’autres personnes à rejoindre son réseau. Chaque fois que quelqu’un active un niveau, le paiement est automatiquement réparti à travers un smart contract. Il n'y a pas de promesse de rendement sans effort : vous gagnez uniquement si vous participez activement pour développer votre équipe en référence 3 personnes et leur demander d'en faire autant. Après cela, tout ce qui vous restera à faire c'est d'attendre les paiements et d'activer vos niveaux afin d'obtenir plus de revenus jusqu'à 1 million de dollars au niveau 7. Tout est transparent, sécurisé et contrôlé par la blockchain.</p>
     </div>
   </section>
-  
+
+  <!-- Règles -->
   <section class="rules">
     <div class="container">
-      <h2>Règles à respecter</h2>
+      <h2>Règles du projet</h2>
       <ul>
-        <li>Océan Money n’est pas un site d’investissement passif. Vous devez référer des membres pour avancer dans les niveaux.</li>
-        <li>Chaque personne peut parrainer 3 membres, et ainsi de suite sur 7 niveaux.</li>
-        <li>Les paiements se font uniquement en crypto BNB, de manière sécurisée et automatique.</li>
-        <li>Vous gagnez uniquement lorsque des personnes rejoignent le système à travers votre réseau.</li>
+        <li>Ce n’est pas un site d’investissement.</li>
+        <li>Vous devez référer des personnes pour générer des revenus.</li>
+        <li>Chaque activation de niveau est un paiement unique en crypto (BNB) avec des valeurs fixes que vous allez retrouver dans le PDF du projet.</li>
+        <li>Les paiements sont envoyés automatiquement dans les portefeuilles selon les niveaux.</li>
+        <li>Le système est 100% automatisé via un smart contract sécurisé.</li>
       </ul>
     </div>
   </section>
 
+  <!-- Tableau des niveaux -->
   <section class="levels">
     <div class="container">
-      <h2>Les 7 niveaux et leurs gains</h2>
+      <h2>Niveaux et gains</h2>
       <table>
         <thead>
           <tr>
             <th>Niveau</th>
             <th>Nom</th>
             <th>Prix (USDT)</th>
-            <th>Nombre de membres</th>
-            <th>Gain estimé (USDT)</th>
+            <th>Membres requis</th>
+            <th>Gain total</th>
           </tr>
         </thead>
         <tbody>
           <tr><td>1</td><td>Plancton</td><td>5</td><td>3</td><td>13.50</td></tr>
           <tr><td>2</td><td>Méduse</td><td>10</td><td>9</td><td>81</td></tr>
           <tr><td>3</td><td>Crabe</td><td>25</td><td>27</td><td>607.50</td></tr>
-          <tr><td>4</td><td>Poisson</td><td>50</td><td>81</td><td>3645</td></tr>
-          <tr><td>5</td><td>Dauphin</td><td>100</td><td>243</td><td>24300</td></tr>
-          <tr><td>6</td><td>Requin</td><td>200</td><td>729</td><td>145800</td></tr>
-          <tr><td>7</td><td>Baleine</td><td>500</td><td>2187</td><td>1093500</td></tr>
+          <tr><td>4</td><td>Poisson</td><td>50</td><td>81</td><td>3,645</td></tr>
+          <tr><td>5</td><td>Dauphin</td><td>100</td><td>243</td><td>24,300</td></tr>
+          <tr><td>6</td><td>Requin</td><td>200</td><td>729</td><td>145,800</td></tr>
+          <tr><td>7</td><td>Baleine</td><td>500</td><td>2187</td><td>1,093,500</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="social-icons">
-      <a href="https://youtube.com/@oceanmoney" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://t.me/oceanmoney" target="_blank"><i class="fab fa-telegram"></i></a>
+  <!-- Résumé clair et logo bas de page -->
+  <section class="summary">
+    <div class="container" style="text-align: center;">
+      <img src="logo.png" alt="Logo bas" style="width: 60px;">
+      <p><strong>Océan Money</strong> est un écosystème où la transparence, l’équité et l’innovation se rejoignent pour créer une nouvelle génération de revenus décentralisés. Gagner de l'argent est devenu beaucoup plus facile de nos jours dès qu'on a un téléphone Android, une connexion internet et qu'on sait très bien comment l'utiliser avec des stratégies MLM. Ce qui fait que la pauvreté n'est plus une excuse valable pour le manque de persévérance, d'action. donc rejoignez-nous dès aujourd’hui.</p>
     </div>
-    <p>Océan Money 2025 - Tous droits réservés</p>
-  </footer>
+  </section>
+
+  <!-- Réseaux sociaux -->
+  <div class="footer-links">
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me/oceanmoney" target="_blank"><i class="fab fa-telegram"></i></a>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    © Océan Money 2025 - Tous droits réservés
+  </div>
 
 </body>
-                                                                             </html>
-  
+    </html>
+    
