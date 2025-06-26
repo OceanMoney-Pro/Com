@@ -114,13 +114,24 @@
       margin-bottom: 10px;
     }
 
-    .social-icons span {
-      font-size: 20px;
+    .social-icons a {
       margin: 0 10px;
-      cursor: pointer;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
     }
 
-    /* Telegram floating button */
+    .social-icons svg {
+      width: 100%;
+      height: 100%;
+      fill: #0077b6;
+      transition: fill 0.3s;
+    }
+
+    .social-icons a:hover svg {
+      fill: #00bfff;
+    }
+
     .telegram-button {
       position: fixed;
       bottom: 100px;
@@ -146,14 +157,12 @@
 </head>
 <body>
 
-  <!-- Logo géant avec emojis -->
   <header>
     <div class="logo-text">🌊🐋 Océan Money</div>
   </header>
 
-  <!-- Formulaire d'inscription -->
   <div class="container">
-    <h2>Bienvenue sur Océan Money 🌊</h2>
+    <h2>Bienvenue 🎉 sur Océan Money. Ici, tout le monde a la même chance.🌊</h2>
 
     <div class="form-group">
       <label>Nom complet</label>
@@ -184,15 +193,19 @@
     </div>
   </div>
 
-  <!-- Bouton Telegram 3D clignotant -->
-  <a class="telegram-button" href="https://t.me/oceanmoney" target="_blank">📩</a>
+  <a class="telegram-button" href="t.me/leader_web3_pro" target="_blank">📩</a>
 
-  <!-- Pied de page avec icônes -->
   <footer>
     <div class="social-icons">
-      <a href="https://wa.me/123456789" target="_blank"><span>📱</span></a>
-      <a href="https://t.me/oceanmoney" target="_blank"><span>📨</span></a>
-      <a href="https://youtube.com/oceanmoney" target="_blank"><span>📺</span></a>
+      <a href="https://whatsapp.com/channel/0029Vb6FxpUAjPXROEbUAz2H" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32"><path d="M16 .396C7.164.396 0 7.56 0 16.395c0 2.89.762 5.71 2.204 8.187L.21 31.43l7.165-1.963a16.02 16.02 0 008.626 2.42c8.837 0 16-7.164 16-16.001C32 7.56 24.837.396 16 .396zM16 29.21a13.14 13.14 0 01-6.685-1.837l-.48-.282-4.256 1.166 1.14-4.143-.308-.502a13.14 13.14 0 01-2.035-7.157c0-7.26 5.912-13.172 13.172-13.172 7.26 0 13.172 5.912 13.172 13.172 0 7.26-5.912 13.172-13.172 13.172zm7.53-9.67c-.412-.206-2.44-1.204-2.82-1.34-.38-.14-.657-.206-.935.206-.276.41-1.07 1.34-1.312 1.61-.24.276-.48.31-.893.104-.413-.206-1.744-.642-3.323-2.047-1.228-1.095-2.058-2.447-2.3-2.857-.24-.41-.025-.63.18-.837.186-.184.413-.48.618-.72.206-.24.275-.41.413-.686.14-.276.07-.52-.035-.725-.104-.206-.935-2.25-1.28-3.09-.34-.82-.685-.706-.935-.72l-.8-.014c-.276 0-.725.104-1.1.52-.38.41-1.437 1.403-1.437 3.417s1.47 3.97 1.673 4.247c.206.276 2.9 4.427 7.03 6.21 4.13 1.79 4.13 1.19 4.87 1.12.75-.07 2.44-.993 2.79-1.95.344-.96.344-1.78.24-1.95-.104-.172-.38-.276-.793-.48z"/></svg>
+      </a>
+      <a href="https://t.me/+NaKxyDjj5KxiMGVk" target="_blank" aria-label="Telegram">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.371 0 0 5.371 0 12s5.371 12 12 12 12-5.371 12-12S18.629 0 12 0zm5.666 7.672l-1.66 7.84c-.124.566-.453.703-.916.437l-2.53-1.864-1.22 1.176c-.135.135-.25.25-.513.25l.184-2.617 4.762-4.3c.207-.184-.045-.288-.32-.104l-5.89 3.7-2.536-.79c-.551-.172-.563-.551.117-.815l9.92-3.822c.457-.17.855.104.709.808z"/></svg>
+      </a>
+      <a href="https://youtube.com/@business2025-com?si=z0N6lBNl72G-5LKy" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.812-42.167-48.428-48.42C456.148 64 288 64 288 64S119.852 64 74.773 75.662c-23.615 6.253-42.147 24.77-48.428 48.42C16 169.497 16 256 16 256s0 86.503 10.345 131.917c6.281 23.65 24.812 42.167 48.428 48.42C119.852 448 288 448 288 448s168.148 0 213.227-11.663c23.615-6.253 42.147-24.77 48.428-48.42C560 342.503 560 256 560 256s0-86.503-10.345-131.917zM232 334.059V177.941L345 256l-113 78.059z"/></svg>
+      </a>
     </div>
     <div>© 2025 Océan Money. Tous droits réservés.</div>
   </footer>
