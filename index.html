@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Océan Money</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Océan Money</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- En-tête -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Océan Money" />
-        <h1>Océan Money</h1>
-      </div>
-      <nav>
-        <ul class="menu">
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">S’inscrire</a></li>
-          <li><a href="#">Se connecter</a></li>
-        </ul>
-        <div class="pdf-buttons">
-          <a href="pdf/oceanmoney-fr.pdf" class="pdf-btn">PDF Français</a>
-          <a href="pdf/oceanmoney-en.pdf" class="pdf-btn">PDF Anglais</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <!-- En-tête -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Océan Money" />
+        <h1>Océan Money</h1>
+      </div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <nav id="main-menu">
+        <ul class="menu">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">S’inscrire</a></li>
+          <li><a href="#">Se connecter</a></li>
+        </ul>
+        <div class="pdf-buttons">
+          <a href="pdf/oceanmoney-fr.pdf" class="pdf-btn">PDF Français</a>
+          <a href="pdf/oceanmoney-en.pdf" class="pdf-btn">PDF Anglais</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Bannière -->
-  <section class="hero">
-    <h2>La blockchain au service de vos revenus</h2>
-    <p>Inscrivez-vous maintenant et commencez à gagner avec un système automatisé et décentralisé.</p>
-    <a href="#" class="cta-btn">S’inscrire maintenant</a>
-  </section>
+  <!-- Bannière -->
+  <section class="hero">
+    <h2>La blockchain au service de vos revenus</h2>
+    <p>Inscrivez-vous maintenant et commencez à gagner avec un système automatisé et décentralisé.</p>
+    <a href="#" class="cta-btn">S’inscrire maintenant</a>
+  </section>
 
-  <!-- Présentation du projet -->
-  <section class="about">
-    <div class="container">
-      <h2>À propos du projet</h2>
-      <p>Océan Money est un projet basé sur la blockchain qui vous permet de gagner de l’argent de manière 100 % automatisée, sans intermédiaire, ni arnaque. Chaque transaction est transparente, chaque paiement est direct.</p>
-    </div>
-  </section>
+  <!-- Présentation du projet -->
+  <section class="about">
+    <div class="container">
+      <h2>À propos du projet</h2>
+      <p>Océan Money est un projet basé sur la blockchain qui vous permet de gagner de l’argent de manière 100 % automatisée, sans intermédiaire, ni arnaque. Chaque transaction est transparente, chaque paiement est direct.</p>
+    </div>
+  </section>
 
-  <!-- Tableau des niveaux -->
-  <section class="levels">
-    <div class="container">
-      <h2>Les 7 niveaux et leurs gains</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Niveau</th>
-            <th>Nom</th>
-            <th>Prix (USDT)</th>
-            <th>Prix (BNB)</th>
-            <th>Gain total (USDT)</th>
-            <th>Gain total (BNB)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Plancton</td><td>5</td><td>0.0087</td><td>13.50</td><td>0.02349</td></tr>
-          <tr><td>2</td><td>Méduse</td><td>10</td><td>0.0174</td><td>81</td><td>0.14094</td></tr>
-          <tr><td>3</td><td>Crabe</td><td>25</td><td>0.0435</td><td>607.50</td><td>1.053225</td></tr>
-          <tr><td>4</td><td>Poisson</td><td>50</td><td>0.087</td><td>3645</td><td>6.33915</td></tr>
-          <tr><td>5</td><td>Dauphin</td><td>100</td><td>0.174</td><td>24300</td><td>42.2619</td></tr>
-          <tr><td>6</td><td>Requin</td><td>200</td><td>0.348</td><td>145800</td><td>253.5711</td></tr>
-          <tr><td>7</td><td>Baleine</td><td>500</td><td>0.87</td><td>1093500</td><td>1902.858</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <!-- Tableau des niveaux -->
+  <section class="levels">
+    <div class="container">
+      <h2>Les 7 niveaux et leurs gains</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Niveau</th>
+            <th>Nom</th>
+            <th>Prix (USDT)</th>
+            <th>Prix (BNB)</th>
+            <th>Gain total (USDT)</th>
+            <th>Gain total (BNB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Plancton</td><td>5</td><td>0.0087</td><td>13.50</td><td>0.02349</td></tr>
+          <tr><td>2</td><td>Méduse</td><td>10</td><td>0.0174</td><td>81</td><td>0.14094</td></tr>
+          <tr><td>3</td><td>Crabe</td><td>25</td><td>0.0435</td><td>607.50</td><td>1.053225</td></tr>
+          <tr><td>4</td><td>Poisson</td><td>50</td><td>0.087</td><td>3645</td><td>6.33915</td></tr>
+          <tr><td>5</td><td>Dauphin</td><td>100</td><td>0.174</td><td>24300</td><td>42.2619</td></tr>
+          <tr><td>6</td><td>Requin</td><td>200</td><td>0.348</td><td>145800</td><td>253.5711</td></tr>
+          <tr><td>7</td><td>Baleine</td><td>500</td><td>0.87</td><td>1093500</td><td>1902.858</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  <!-- Pourquoi choisir Océan Money -->
-  <section class="why">
-    <div class="container">
-      <h2>Pourquoi choisir Océan Money ?</h2>
-      <p>
-        Océan Money est un projet 100 % automatisé grâce à la puissance de la blockchain. Chaque paiement est instantané, direct, sans attente ni intervention humaine. Il n’y a aucun DG, aucun intermédiaire : tout le monde a la même chance.
-        Vous travaillez une seule fois, et le système continue à générer des revenus pour vous de manière illimitée.
-        À l’ère du numérique, nous dépensons des fortunes en connexions, téléphones et gadgets… souvent sans retour.
-        Océan Money change la donne : avec les bonnes stratégies, vous avez un <strong>moyen sûr de gagner de l’argent en ligne</strong>. Il est temps de rejoindre <strong>la nouvelle génération des intelligents financiers</strong>.
-      </p>
-    </div>
-  </section>
+  <!-- Pourquoi choisir Océan Money -->
+  <section class="why">
+    <div class="container">
+      <h2>Pourquoi choisir Océan Money ?</h2>
+      <p>
+        Océan Money est un projet 100 % automatisé grâce à la puissance de la blockchain. Chaque paiement est instantané, direct, sans attente ni intervention humaine. Il n’y a aucun DG, aucun intermédiaire : tout le monde a la même chance.
+        Vous travaillez une seule fois, et le système continue à générer des revenus pour vous de manière illimitée.
+        À l’ère du numérique, nous dépensons des fortunes en connexions, téléphones et gadgets… souvent sans retour.
+        Océan Money change la donne : avec les bonnes stratégies, vous avez un <strong>moyen sûr de gagner de l’argent en ligne</strong>. Il est temps de rejoindre <strong>la nouvelle génération des intelligents financiers</strong>.
+      </p>
+    </div>
+  </section>
 
-  <!-- Message final percutant -->
-  <section class="call">
-    <div class="container">
-      <h2>Ne restez pas en arrière</h2>
-      <p>
-        ⚠️ <strong>Si vous n’avez pas encore un système qui vous rapporte de l’argent en ligne, vous êtes déjà en retard.</strong><br />
-        Tout devient plus cher : nourriture, transport, logement… Et pourtant, vous avez Internet, un téléphone, un ordinateur. La vérité ? La pauvreté <strong>n’est plus une excuse</strong>. Le seul vrai obstacle, c’est l’inaction.
-      </p>
-      <p>
-        Considérez ce projet comme une <strong>invention</strong> : un <em>moyen technique de résoudre un problème réel</em>, celui du manque d’argent.
-        Comme le télescope a permis de voir l’invisible, ou comme l’alphabet nous a permis de communiquer,
-        <strong>Océan Money est une innovation qui vient résoudre le fléau de l’arnaque en ligne</strong>.
-      </p>
-      <p>
-        Vous n’avez pas besoin d’un diplôme, juste d’un peu de foi et de discipline. Car au fond de vous sommeille un potentiel énorme.
-        Ce projet est votre <strong>véhicule vers une vie meilleure</strong>, ne le laissez pas passer.
-      </p>
-    </div>
-  </section>
+  <!-- Message final percutant -->
+  <section class="call">
+    <div class="container">
+      <h2>Ne restez pas en arrière</h2>
+      <p>
+        ⚠️ <strong>Si vous n’avez pas encore un système qui vous rapporte de l’argent en ligne, vous êtes déjà en retard.</strong><br />
+        Tout devient plus cher : nourriture, transport, logement… Et pourtant, vous avez Internet, un téléphone, un ordinateur. La vérité ? La pauvreté <strong>n’est plus une excuse</strong>. Le seul vrai obstacle, c’est l’inaction.
+      </p>
+      <p>
+        Considérez ce projet comme une <strong>invention</strong> : un <em>moyen technique de résoudre un problème réel</em>, celui du manque d’argent.
+        Comme le télescope a permis de voir l’invisible, ou comme l’alphabet nous a permis de communiquer,
+        <strong>Océan Money est une innovation qui vient résoudre le fléau de l’arnaque en ligne</strong>.
+      </p>
+      <p>
+        Vous n’avez pas besoin d’un diplôme, juste d’un peu de foi et de discipline. Car au fond de vous sommeille un potentiel énorme.
+        Ce projet est votre <strong>véhicule vers une vie meilleure</strong>, ne le laissez pas passer.
+      </p>
+    </div>
+  </section>
 
-  <!-- Pied de page -->
-  <footer class="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <p>&copy; 2025 Océan Money. Tous droits réservés.</p>
-    </div>
-  </footer>
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Océan Money. Tous droits réservés.</p>
+    </div>
+  </footer>
 
-  <!-- Bouton Telegram fixe -->
-  <a href="#" class="telegram-float" title="Support client Telegram">
-    <i class="fab fa-telegram-plane"></i>
-  </a>
+  <!-- Bouton Telegram fixe et clignotant -->
+  <a href="#" class="telegram-float" title="Support client Telegram">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+
+  <!-- JS pour menu responsive -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.getElementById('main-menu').classList.toggle('active');
+    });
+  </script>
 
 </body>
-  </html>
-  
+                                                </html>
+                                                                                  
