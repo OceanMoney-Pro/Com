@@ -2,53 +2,30 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Inscription – Océan Money</title>
+  <title>Inscription - 🌊🐋Océan Money</title>
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"> <!-- si tu as un fichier CSS global -->
 </head>
 <body>
-  <header>
-    <h1>🐳 Océan Money</h1>
-    <p>Bienvenue dans la révolution du revenu décentralisé 🌊</p>
-  </header>
+  <div class="container">
+    <h1>🚀 Bienvenue sur 🐬Océan Money</h1>
+    <p>Inscris-toi et rejoins l'aventure dès maintenant !</p>
 
-  <main>
-    <section id="formulaire">
-      <h2>Créer un compte</h2>
-      <p>Remplis les champs ci-dessous et connecte ton portefeuille</p>
+    <div class="form-box">
+      <input type="text" placeholder="Nom complet">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Télégram">
+      <input type="password" placeholder="Mot de passe">
+      
+      <button class="btn3d">Connect Wallet</button>
+      <button class="btn3d">S’inscrire</button>
+      <a href="#" class="btn3d link-button">Se connecter</a>
+    </div>
+  </div>
 
-      <form id="signup-form">
-        <label>Nom complet :</label>
-        <input type="text" id="name" required>
-
-        <label>Email :</label>
-        <input type="email" id="email" required>
-
-        <label>Téléphone (WhatsApp) :</label>
-        <input type="tel" id="phone" required>
-
-        <label>Mot de passe :</label>
-        <input type="password" id="password" required>
-
-        <label>Confirmer le mot de passe :</label>
-        <input type="password" id="confirm-password" required>
-
-        <label>Lien de parrainage détecté :</label>
-        <input type="text" id="referral" readonly>
-
-        <button type="button" onclick="connectWallet()">🔗 Connecter mon Wallet</button>
-        <button type="submit">🚀 M'inscrire maintenant</button>
-      </form>
-
-      <p>Déjà inscrit ? <a href="connexion.html">Se connecter</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Océan Money. Tous droits réservés</p>
-  </footer>
-
-  <script src="inscription.js"></script>
+  <!-- Bouton Telegram clignotant -->
+  <a href="https://t.me/ton_support_telegram" class="telegram-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+  </a>
 </body>
-  </html>
-  
+</html>
