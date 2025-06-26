@@ -193,4 +193,39 @@ copyright {
   margin-top: 10px;
   margin-bottom: 20px;
     }
-    
+  /* Boutons "S’inscrire maintenant" modernes et centrés */
+.text-center {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.signup-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0, 114, 255, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #005ecb, #00aaff);
+}
+
+/* Ajustement des titres */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #003366;
+  }
+
