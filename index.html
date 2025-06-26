@@ -3,73 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Océan Money - Gagnez en construisant votre équipe</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
-      color: #003366;
-      text-align: center;
-    }
-    header {
-      background-color: #0077be;
-      color: white;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-    }
-    .btn {
-      background-color: #00bfff;
-      border: none;
-      padding: 15px 30px;
-      margin: 20px;
-      font-size: 18px;
-      color: white;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-    .btn:hover {
-      background-color: #009acd;
-    }
-    .section {
-      padding: 40px 20px;
-    }
-    footer {
-      background-color: #0077be;
-      color: white;
-      padding: 15px;
-    }
-  </style>
+  <title>Océan Money</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>🌊 Bienvenue sur Océan Money</h1>
-    <p>Le réseau crypto qui vous fait nager vers la liberté financière</p>
+    <h1>🌊 Océan Money</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">FAQ</a>
+      <a href="#">S’inscrire</a>
+      <a href="#">Se connecter</a>
+    </nav>
   </header>
 
-  <div class="section">
-    <h2>🚀 Commencez dès maintenant</h2>
-    <p>Inscrivez-vous et bâtissez votre équipe jusqu’à 7 niveaux !</p>
-    <button class="btn" onclick="alert('Bientôt disponible !')">S'inscrire</button>
-  </div>
+  <section class="hero">
+    <h2>Bienvenue sur Océan Money</h2>
+    <p>Le projet 100% automatisé basé sur la blockchain avec paiements en BNB</p>
+    <a href="#" class="button">🚀 S’inscrire maintenant</a>
+    <a href="#" class="button">En savoir plus</a>
+  </section>
 
-  <div class="section">
-    <h2>🔍 Comment ça marche ?</h2>
-    <p>Vous parrainez 3 personnes. Eux aussi. Jusqu’à 7 niveaux.<br>
-    Paiements automatiques via Smart Contract.</p>
-  </div>
+  <section>
+    <h3>🔍 Comment ça fonctionne ?</h3>
+    <p>Vous parrainez 3 personnes, qui parrainent 3 personnes, et ainsi de suite… Vous gagnez à chaque activation de niveau par génération. Les paiements sont automatiques via smart contract.</p>
+  </section>
 
-  <div class="section">
-    <h2>💰 Les niveaux</h2>
-    <p>Plancton (5 USDT), Méduse (10 USDT), Crabe (25 USDT)...<br>
-    Jusqu’à la Baleine (500 USDT) pour plus de 1 million $ potentiels !</p>
-  </div>
+  <section>
+    <h3>📊 Niveaux & Paiements</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Niveau</th>
+          <th>Nom</th>
+          <th>Prix (BNB)</th>
+          <th>Prix (USD)</th>
+          <th>Membres en dessous</th>
+          <th>Gain estimé</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Plancton</td><td>0.0087</td><td>5 $</td><td>3</td><td>13.50 $</td></tr>
+        <tr><td>2</td><td>Méduse</td><td>0.0174</td><td>10 $</td><td>9</td><td>81 $</td></tr>
+        <tr><td>3</td><td>Crabe</td><td>0.0435</td><td>25 $</td><td>27</td><td>607.50 $</td></tr>
+        <tr><td>4</td><td>Poisson</td><td>0.087</td><td>50 $</td><td>81</td><td>3,645 $</td></tr>
+        <tr><td>5</td><td>Dauphin</td><td>0.174</td><td>100 $</td><td>243</td><td>24,300 $</td></tr>
+        <tr><td>6</td><td>Requin</td><td>0.348</td><td>200 $</td><td>729</td><td>145,800 $</td></tr>
+        <tr><td>7</td><td>Baleine</td><td>0.87</td><td>500 $</td><td>2,187</td><td>1,093,500 $</td></tr>
+      </tbody>
+    </table>
+  </section>
 
   <footer>
-    <p>© 2025 Océan Money | Tous droits réservés</p>
+    <p>Suivez-nous sur :</p>
+    <a href="https://wa.me/TONNUMERO" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/TONTELEGRAM" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://facebook.com/TONPAGE" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://youtube.com/@TONYOUTUBE" target="_blank"><i class="fab fa-youtube"></i></a>
+    <p>&copy; 2025 Océan Money. Tous droits réservés.</p>
   </footer>
+
+  <a href="https://t.me/TONTELEGRAM" id="telegram-float" target="_blank">
+    <i class="fab fa-telegram"></i>
+  </a>
 </body>
   </html>
   
