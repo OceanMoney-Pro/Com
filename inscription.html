@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inscription | Océan Money</title>
   <style>
     body {
@@ -17,11 +17,13 @@
 
     header {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px 10px;
     }
 
-    header img {
-      width: 120px;
+    .logo-text {
+      font-size: 42px;
+      font-weight: bold;
+      color: #0077b6;
     }
 
     .container {
@@ -104,45 +106,73 @@
     footer {
       text-align: center;
       padding: 20px 0;
-      font-size: 12px;
+      font-size: 14px;
       background: transparent;
     }
 
-    footer .social-icons img {
-      width: 20px;
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons span {
+      font-size: 20px;
       margin: 0 10px;
-      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    /* Telegram floating button */
+    .telegram-button {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      background: #0088cc;
+      color: white;
+      font-size: 24px;
+      padding: 16px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      animation: blink 1s infinite;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    @keyframes blink {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
   </style>
 </head>
 <body>
 
+  <!-- Logo géant avec emojis -->
   <header>
-    <img src="logo-ocean-money" alt="🌊Logo Océan Money">
+    <div class="logo-text">🌊🐋 Océan Money</div>
   </header>
 
+  <!-- Formulaire d'inscription -->
   <div class="container">
-    <h2>Bienvenue 🎉 sur Océan Money. Ici, tout le monde nage vers la liberté financière 🌊</h2>
+    <h2>Bienvenue sur Océan Money 🌊</h2>
 
     <div class="form-group">
       <label>Nom complet</label>
-      <input type="text" placeholder="Votre nom">
+      <input type="text" placeholder="Votre nom" />
     </div>
 
     <div class="form-group">
       <label>Adresse email</label>
-      <input type="email" placeholder="email@example.com">
+      <input type="email" placeholder="email@example.com" />
     </div>
 
     <div class="form-group">
       <label>Mot de passe</label>
-      <input type="password" placeholder="********">
+      <input type="password" placeholder="********" />
     </div>
 
     <div class="form-group">
       <label>Confirmer le mot de passe</label>
-      <input type="password" placeholder="********">
+      <input type="password" placeholder="********" />
     </div>
 
     <button class="wallet-button">🔗 Connecter mon portefeuille</button>
@@ -154,21 +184,18 @@
     </div>
   </div>
 
+  <!-- Bouton Telegram 3D clignotant -->
+  <a class="telegram-button" href="https://t.me/oceanmoney" target="_blank">📩</a>
+
+  <!-- Pied de page avec icônes -->
   <footer>
     <div class="social-icons">
-      <a href="https://wa.me/123456789" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp">
-      </a>
-      <a href="https://t.me/oceanmoney" target="_blank">
-        <img src="telegram-icon.png" alt="Telegram">
-      </a>
-      <a href="https://youtube.com/oceanmoney" target="_blank">
-        <img src="youtube-icon.png" alt="YouTube">
-      </a>
+      <a href="https://wa.me/123456789" target="_blank"><span>📱</span></a>
+      <a href="https://t.me/oceanmoney" target="_blank"><span>📨</span></a>
+      <a href="https://youtube.com/oceanmoney" target="_blank"><span>📺</span></a>
     </div>
     <div>© 2025 Océan Money. Tous droits réservés.</div>
   </footer>
 
 </body>
-  </html>
-  
+</html>
