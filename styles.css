@@ -1,0 +1,109 @@
+/* 🌊 Feuille de style pour la page d'accueil Océan Money */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f9ff;
+  color: #00334e;
+}
+
+header {
+  background-color: #0077b6;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #caf0f8, #ade8f4);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.2em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 1.8em;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+#telegram-float {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #0088cc;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-decoration: none;
+  }
+  
