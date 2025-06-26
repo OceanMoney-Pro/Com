@@ -7,36 +7,119 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Comportement global responsive */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:Arial, sans-serif; line-height:1.6; overflow-x:hidden; }
-    .container { width:95%; max-width:1200px; margin:0 auto; }
-    .header { background:#003366; color:white; padding:15px 0; }
-    .logo { display:flex; align-items:center; }
-    .logo img { width:50px; margin-right:10px; }
-    nav ul.menu { list-style:none; display:flex; gap:15px; }
-    nav ul.menu a { color:white; text-decoration:none; }
-    .pdf-buttons { margin-top:10px; }
-    .pdf-btn { background:#fff; color:#003366; padding:5px 10px; border-radius:5px; margin-right:5px; text-decoration:none; }
-    .hero { background:linear-gradient(#003366,#006699); color:white; text-align:center; padding:50px 20px; }
-    .cta-btn { background:#00cc66; color:white; padding:15px 25px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:20px; font-size:18px; }
-    .about, .levels, .why, .call { padding:40px 20px; background:#f5f5f5; }
-    .levels table { width:100%; border-collapse:collapse; }
-    .levels th, .levels td { border:1px solid #ddd; padding:8px; text-align:center; }
-    .levels th { background:#006699; color:white; }
-    .telegram-button { position:fixed; bottom:3%; right:1%; z-index:999; background:#0088cc; color:white; padding:12px; border-radius:50%; font-size:24px; animation:blink 1s infinite; }
-    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
-    @media(max-width:768px){ nav ul.menu { flex-direction:column; gap:10px; } }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      background: #003366;
+      color: white;
+      padding: 15px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+    .pdf-buttons {
+      margin-top: 10px;
+    }
+    .pdf-btn {
+      background: #ffffff;
+      color: #003366;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    .hero {
+      background: linear-gradient(#003366, #006699);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .cta-btn {
+      background: #00cc66;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .about, .levels, .why, .call, .details {
+      padding: 40px 20px;
+      background: #f5f5f5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #006699;
+      color: white;
+    }
+    .telegram-button {
+      position: fixed;
+      bottom: 3%;
+      right: 1%;
+      z-index: 999;
+      background-color: #0088cc;
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 24px;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    @media(max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Bouton Telegram clignotant -->
-  <a href="#" class="telegram-button" title="Service client Telegram">
+  <!-- Bouton Telegram service client -->
+  <a href="https://t.me/oceanmoney" class="telegram-button" title="Service client Telegram">
     <i class="fab fa-telegram-plane"></i>
   </a>
 
-  <!-- En‑tête -->
+  <!-- En-tête -->
   <header class="header">
     <div class="container">
       <div class="logo">
@@ -51,8 +134,8 @@
           <li><a href="#">Se connecter</a></li>
         </ul>
         <div class="pdf-buttons">
-          <a href="pdf/oceanmoney‑fr.pdf" class="pdf-btn">PDF Français</a>
-          <a href="pdf/oceanmoney‑en.pdf" class="pdf-btn">PDF Anglais</a>
+          <a href="pdf/oceanmoney-fr.pdf" class="pdf-btn">PDF Français</a>
+          <a href="pdf/oceanmoney-en.pdf" class="pdf-btn">PDF Anglais</a>
         </div>
       </nav>
     </div>
@@ -65,23 +148,22 @@
     <a href="#" class="cta-btn">S’inscrire maintenant</a>
   </section>
 
-  <!-- 2e bouton S’inscrire -->
-  <div style="text-align:center; padding:20px;">
+  <!-- Deuxième bouton s'inscrire -->
+  <div style="text-align: center; padding: 20px;">
     <a href="#" class="cta-btn">S’inscrire maintenant</a>
   </div>
 
-  <!-- À propos (intégral) -->
+  <!-- Présentation du projet -->
   <section class="about">
     <div class="container">
       <h2>À propos du projet</h2>
-      <p>Océan Money est un projet basé sur la blockchain qui vous permet de gagner de l’argent de manière 100 % automatisée, sans intermédiaire, ni arnaque. Chaque transaction est transparente, chaque paiement est direct.</p>
-      <p>Océan Money est un projet 100% basé sur la blockchain qui permet à chaque personne connectée à Internet de créer des revenus automatiques sans intermédiaire, ni manipulation. Grâce à un smart contract parfaitement codé, chaque paiement se fait de façon directe et transparente.</p>
-      <p>Nous sommes dans un monde en pleine mutation où l’intelligence artificielle, la blockchain et les crypto‑monnaies bouleversent l’économie mondiale. Ceux qui ne s’adaptent pas comme Nokia à l’époque des Android, prennent un retard immense. Le monde évolue. Adaptons‑nous.</p>
+      <p><strong>Océan Money</strong> est un projet 100% basé sur la blockchain qui permet à chaque personne connectée à Internet de créer des revenus automatiques sans intermédiaire, ni manipulation. Grâce à un smart contract parfaitement codé, chaque paiement se fait de façon directe et transparente.</p>
+      <p>Nous sommes dans un monde en pleine mutation où l’intelligence artificielle, la blockchain et les crypto-monnaies bouleversent l’économie mondiale. Ceux qui ne s’adaptent pas comme Nokia à l’époque des Android, prennent un retard immense. Le monde évolue. Adaptons-nous.</p>
     </div>
   </section>
 
-  <!-- 3e bouton S’inscrire -->
-  <div style="text-align:center; padding:20px;">
+  <!-- Troisième bouton s'inscrire -->
+  <div style="text-align: center; padding: 20px;">
     <a href="#" class="cta-btn">S’inscrire maintenant</a>
   </div>
 
@@ -92,7 +174,12 @@
       <table>
         <thead>
           <tr>
-            <th>Niveau</th><th>Nom</th><th>Prix (USDT)</th><th>Prix (BNB)</th><th>Gain total (USDT)</th><th>Gain total (BNB)</th>
+            <th>Niveau</th>
+            <th>Nom</th>
+            <th>Prix (USDT)</th>
+            <th>Prix (BNB)</th>
+            <th>Gain total (USDT)</th>
+            <th>Gain total (BNB)</th>
           </tr>
         </thead>
         <tbody>
@@ -133,5 +220,5 @@
   </section>
 
 </body>
-  </html>
+                                          </html>
   
