@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de Bord - Océan Money</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #0093E9, #80D0C7);
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .menu-burger {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background: #003b6f;
+      transition: 0.3s;
+      padding: 1rem;
+      z-index: 1000;
+    }
+    .sidebar.active { right: 0; }
+    .sidebar a {
+      color: #fff;
+      display: block;
+      padding: 1rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #ffffff33;
+    }
+    .profile {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .matrices, .network-table, .deep-view {
+      padding: 1rem;
+    }
+    .matrice-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+      box-shadow: 0 0 10px #00000033;
+    }
+    .matrice-card.active {
+      border: 2px solid #00ffcc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background-color: rgba(255,255,255,0.1);
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: center;
+      border-bottom: 1px solid #ffffff33;
+    }
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0,0,0,0.2);
+    }
+    .social-icons svg {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      fill: white;
+    }
+    .telegram-client {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #0088cc;
+      padding: 0.75rem;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌊 Tableau de bord</h1>
+    <div class="menu-burger" onclick="toggleSidebar()">≡</div>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#">🏠 Accueil</a>
+    <a href="#">📊 Tableau de bord</a>
+    <a href="#">📘 À propos</a>
+    <a href="#">🇫🇷 PDF FR</a>
+    <a href="#">🇬🇧 PDF EN</a>
+    <a href="#">🚪 Déconnexion</a>
+  </div>
+
+  <div class="profile">
+    <img src="https://via.placeholder.com/100" alt="Profil" />
+    <h2>Nom d'utilisateur</h2>
+    <p>ID : #8</p>
+    <p>Adresse Wallet : 0x1234...abcd</p>
+    <p>Date d'inscription : 27/06/2025</p>
+    <p>ID Parrain : <button onclick="voirParrain()">#3</button></p>
+    <p>Date d'inscription Parrain : 20/06/2025</p>
+    <h3>Total des gains : <strong>1.294 BNB</strong></h3>
+    <p>Lien de parrainage :<br><code>https://oceanmoney.com/register?id=8</code></p>
+  </div>
+
+  <div class="matrices">
+    <h2>Mes Matrices</h2>
+    <div class="matrice-card active">
+      <h3>Niveau 1 - 0.0087 BNB</h3>
+      <p>Statut : ✅ Actif</p>
+      <p>Revenus : 0.017 BNB</p>
+    </div>
+    <div class="matrice-card">
+      <h3>Niveau 2 - 0.015 BNB</h3>
+      <p>Statut : 🔓 À activer</p>
+      <p>Revenus : 0 BNB</p>
+    </div>
+    <!-- Ajouter les autres niveaux ici -->
+  </div>
+
+  <div class="network-table">
+    <h2>👥 Mon Réseau</h2>
+    <h3>1ère Génération (3 membres)</h3>
+    <table>
+      <tr>
+        <th>Adresse Wallet</th>
+        <th>ID</th>
+        <th>Niveau</th>
+        <th>Partenaires</th>
+      </tr>
+      <tr>
+        <td>0xabc...123</td>
+        <td>#15</td>
+        <td>1</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>0xdef...456</td>
+        <td>#16</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </table>
+    <!-- Ajouter 2e et 3e générations ici -->
+  </div>
+
+  <div class="deep-view">
+    <h2>🔍 Vue en profondeur</h2>
+    <p>Ici on pourra voir tous les membres connectés entre eux dans l'arbre du réseau (ajouter plus tard en JavaScript)</p>
+  </div>
+
+  <div class="footer">
+    <div class="social-icons">
+      <svg><!-- WhatsApp SVG --></svg>
+      <svg><!-- YouTube SVG --></svg>
+      <svg><!-- Telegram SVG --></svg>
+    </div>
+  </div>
+  <a href="https://t.me/support_oceanmoney" class="telegram-client">📞</a>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+    function voirParrain() {
+      alert("Chargement du tableau de bord du parrain en lecture seule...");
+    }
+  </script>
+</body>
+  </html>
+                               
