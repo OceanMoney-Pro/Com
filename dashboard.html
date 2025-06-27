@@ -6,6 +6,86 @@
   <title>Dashboard Océan Money</title>
   <style>
     body {
+      <!-- À mettre dans toutes les pages, juste après <body> -->
+<style>
+  .navbar {
+    background: #00aaff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #0077cc;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .menu a:last-child {
+    border-bottom: none;
+  }
+
+  .burger {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .menu {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      background: none;
+    }
+    .menu a {
+      border: none;
+      padding: 0 15px;
+    }
+    .burger {
+      display: none;
+    }
+  }
+</style>
+
+<div class="navbar">
+  <h1>🌊 Océan Money</h1>
+  <div class="burger" onclick="document.querySelector('.menu').classList.toggle('show')">☰</div>
+  <div class="menu">
+    <a href="index.html">🏠 Accueil</a>
+    <a href="inscription.html">📝 Inscription</a>
+    <a href="connexion.html">🔐 Connexion</a>
+    <a href="dashboard.html">📊 Tableau de bord</a>
+  </div>
+</div>
+
+<script>
+  // Menu responsive toggle
+  document.addEventListener('click', function(e) {
+    const menu = document.querySelector('.menu');
+    if (!e.target.closest('.navbar')) {
+      menu.classList.remove('show');
+    }
+  });
+</script>
+  
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom, #dff6ff, #97e0f8);
       margin: 0;
