@@ -2,86 +2,36 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tableau de bord Océan Money</title>
+  <title>Dashboard Océan Money</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #dff6ff, #97e0f8);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      background-color: #00aaff;
-      color: white;
-      padding: 1em;
-      font-size: 1.5em;
-    }
-
-    button {
-      padding: 12px 20px;
-      margin-top: 30px;
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    #wallet-address {
-      margin-top: 20px;
-      font-size: 1.2em;
-      color: #333;
-    }
+    body{ font-family:Arial; background:linear-gradient(to bottom,#dff6ff,#97e0f8);
+      text-align:center;margin:0;padding:0;}
+    header{background:#00aaff;color:#fff;padding:1em;font-size:1.5em;}
+    button{padding:12px 20px;margin-top:30px;background:linear-gradient(45deg,#00c6ff,#0072ff);
+      color:#fff;border:none;border-radius:10px;font-weight:bold;box-shadow:0 5px 10px rgba(0,0,0,0.2);
+      cursor:pointer;font-size:1em;}
+    #wallet-address{margin-top:20px;font-size:1.2em;color:#333;}
   </style>
 </head>
 <body>
-
   <header>🌊 Tableau de bord Océan Money</header>
-
-  <p>Bienvenue ! Veuillez connecter votre portefeuille pour accéder à votre tableau de bord.</p>
-
-  <button onclick="connectWallet()">🔗 Connecter mon portefeuille</button>
-
+  <p>Connecte ton portefeuille SafePal pour afficher ton tableau de bord.</p>
+  <button onclick="connectWallet()">🔗 Connecter portefeuille</button>
   <div id="wallet-address"></div>
 
-  <!-- Scripts Web3 + WalletConnect -->
   <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
-
   <script>
-    async function connectWallet() {
-      const provider = new WalletConnectProvider.default({
-        rpc: {
-          56: "https://bsc-dataseed.binance.org/"
-        },
-        chainId: 56
-      });
-
+    async function connectWallet(){
+      const provider = new WalletConnectProvider.default({rpc:{56:"https://bsc-dataseed.binance.org/"},chainId:56});
       try {
-        // Activer la connexion
         await provider.enable();
-
-        // Créer une instance Web3 avec ce provider
         const web3 = new Web3(provider);
-
-        // Récupérer les comptes connectés
         const accounts = await web3.eth.getAccounts();
-        const address = accounts[0];
-
-        // Afficher l'adresse sur la page
-        document.getElementById("wallet-address").innerText = "✅ Portefeuille connecté : " + address;
-      } catch (error) {
-        alert("Erreur lors de la connexion au portefeuille !");
-        console.error(error);
-      }
+        document.getElementById("wallet-address").innerText = "✅ Connecté : " + accounts[0];
+      } catch(e){ alert("Erreur connexion"); console.error(e); }
     }
   </script>
-
 </body>
 </html>
