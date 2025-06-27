@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
       color: #333;
       display: flex;
       flex-direction: column;
@@ -184,7 +184,6 @@
         try {
           const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
           alert("Connecté avec l'adresse : " + accounts[0]);
-          // Rediriger vers le dashboard après la connexion
           window.location.href = "dashboard.html";
         } catch (err) {
           alert("Connexion refusée !");
