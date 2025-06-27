@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connexion - Océan Money</title>
+  <title>Connexion | Océan Money</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     body {
-      background: linear-gradient(to bottom right, #f0f8ff, #cce7ff);
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
       color: #333;
       display: flex;
       flex-direction: column;
@@ -21,156 +16,184 @@
     }
 
     header {
-      background-color: white;
-      padding: 1rem;
+      background-color: #fff;
+      padding: 1.2rem;
       text-align: center;
-      font-size: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
       font-weight: bold;
       color: orange;
-      border-bottom: 2px solid #ddd;
     }
 
     main {
       flex: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       padding: 2rem;
+    }
+
+    .card {
+      background-color: #ffffffcc;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      width: 100%;
       text-align: center;
     }
 
-    h2 {
+    .card h2 {
       font-size: 1.8rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      color: #004d40;
     }
 
     .wallet-btn {
-      background: linear-gradient(145deg, #4fd1c5, #4299e1);
+      background: linear-gradient(45deg, #00c853, #64dd17);
+      border: none;
       color: white;
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 40px;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(66, 153, 225, 0.6);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
     }
 
     .wallet-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(66, 153, 225, 0.8);
+      box-shadow: 0 6px 20px rgba(0, 200, 83, 0.6);
     }
 
-    .signup-link {
-      margin-top: 1.5rem;
-      font-size: 1rem;
-    }
-
-    .signup-link a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .signup-link a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #f8f9fa;
-      padding: 1rem;
+    .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
     }
 
-    .social-icon {
-      width: 35px;
-      height: 35px;
-      transition: transform 0.3s;
+    .social-icons a svg {
+      width: 36px;
+      height: 36px;
+      fill: #00695c;
+      transition: transform 0.3s ease;
     }
 
-    .social-icon:hover {
+    .social-icons a:hover svg {
       transform: scale(1.2);
+      fill: #00796b;
     }
 
-    .floating-telegram {
+    .telegram-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       width: 60px;
       height: 60px;
-      background: #0088cc;
+      background-color: #229ED9;
       border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      animation: pulse 1.5s infinite;
-      box-shadow: 0 0 10px #0088cc;
-      cursor: pointer;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      animation: pulse 2s infinite;
+      z-index: 1000;
     }
 
-    .floating-telegram img {
+    .telegram-float svg {
       width: 30px;
       height: 30px;
+      fill: white;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 10px #0088cc; }
-      50% { box-shadow: 0 0 20px #0088cc; }
-      100% { box-shadow: 0 0 10px #0088cc; }
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(34, 158, 217, 0.5);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(34, 158, 217, 0);
+      }
     }
 
-    @media screen and (max-width: 600px) {
-      header {
-        font-size: 1.5rem;
-      }
-
-      .wallet-btn {
-        width: 100%;
-      }
+    footer {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
-  <header>🌊🐋 Océan Money</header>
+
+  <header>
+    <h1>🌊🐋 Océan Money</h1>
+  </header>
 
   <main>
-    <h2>Connexion sécurisée</h2>
-    <button class="wallet-btn" onclick="connectWallet()">Se connecter avec mon portefeuille</button>
-    <div class="signup-link">
-      Pas encore inscrit ? <a href="inscription.html">Créez un compte</a>
+    <div class="card">
+      <h2>Connexion avec Wallet</h2>
+      <button class="wallet-btn" onclick="connectWallet()">Se connecter avec son portefeuille</button>
     </div>
   </main>
 
-  <footer>
-    <a href="https://wa.me/1234567890" target="_blank"><img src="icons/whatsapp.svg" alt="WhatsApp" class="social-icon"></a>
-    <a href="https://t.me/oceanmoney" target="_blank"><img src="icons/telegram.svg" alt="Telegram" class="social-icon"></a>
-    <a href="https://youtube.com/@oceanmoney" target="_blank"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
-  </footer>
-
-  <div class="floating-telegram" onclick="window.open('https://t.me/oceanmoney', '_blank')">
-    <img src="icons/telegram.svg" alt="Service client">
+  <!-- Réseaux sociaux SVG -->
+  <div class="social-icons">
+    <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path d="M380.9 97.1C339-3.7 252.9-16.5 180 24.3 107.2 65.2 72.2 147 93.7 223.4L12 480l256.6-82.1c76.4 21.6 158.2-11.6 199.1-84.4s16.6-159.1-76.8-216.4zm-120 284.3c-54.4 0-102.7-27.3-135.1-72.2l-6.1-8.6L85 336.6 112.5 247l-9-5.6c-30.5-18.8-54.3-47-68-81.4-13.7-34.4-16.2-71.9-7-106.9C46.8 41.6 88.5 24 133.1 24c98.1 0 177.8 79.8 177.8 177.8s-79.8 177.8-177.8 177.8z"/>
+      </svg>
+    </a>
+    <a href="https://t.me/oceanmoney" target="_blank" title="Telegram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+        <path d="M248,8C111.033,8,0,119.033,0,256s111.033,248,248,248s248-111.033,248-248S384.967,8,248,8z M365.4,172.3l-36.4,172.4 c-2.7,12.4-10,15.5-20.3,9.7l-56.1-41.3l-27,25.9c-3,3-5.5,5.5-11.3,5.5l4-57.4l104.6-94.5c4.5-4-1-6.3-7-2.3L175.1,281.1 l-55.1-17.2c-12-3.8-12.2-12-2.6-17.7l215.6-99.2C353.6,141.6,368.2,152.2,365.4,172.3z"/>
+      </svg>
+    </a>
+    <a href="https://youtube.com/@oceanmoney" target="_blank" title="YouTube">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path d="M549.7 124.1c-6.3-24-24.9-42.7-48.9-48.9C456.4 64 288 64 288 64s-168.4 0-212.8 11.2c-24 6.3-42.7 24.9-48.9 48.9C16 168.4 16 256 16 256s0 87.6 10.3 131.9c6.3 24 24.9 42.7 48.9 48.9C119.6 448 288 448 288 448s168.4 0 212.8-11.2c24-6.3 42.7-24.9 48.9-48.9C560 343.6 560 256 560 256s0-87.6-10.3-131.9zM232 336V176l142 80-142 80z"/>
+      </svg>
+    </a>
   </div>
 
+  <!-- Bouton flottant Telegram service client -->
+  <a href="https://t.me/oceanmoney_support" class="telegram-float" target="_blank" title="Service Client Telegram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+      <path d="M248,8C111.033,8,0,119.033,0,256s111.033,248,248,248s248-111.033,248-248S384.967,8,248,8z M365.4,172.3l-36.4,172.4 c-2.7,12.4-10,15.5-20.3,9.7l-56.1-41.3l-27,25.9c-3,3-5.5,5.5-11.3,5.5l4-57.4l104.6-94.5c4.5-4-1-6.3-7-2.3L175.1,281.1 l-55.1-17.2c-12-3.8-12.2-12-2.6-17.7l215.6-99.2C353.6,141.6,368.2,152.2,365.4,172.3z"/>
+    </svg>
+  </a>
+
+  <footer>
+    &copy; 2025 Océan Money. Tous droits réservés.
+  </footer>
+
+  <!-- Script de connexion -->
   <script>
     async function connectWallet() {
       if (typeof window.ethereum !== 'undefined') {
         try {
           const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-          const walletAddress = accounts[0];
-          // Rediriger selon qu’il est inscrit ou non
-          // Exemple temporaire :
-          window.location.href = 'dashboard.html';
-        } catch (error) {
-          alert("Connexion refusée. Veuillez accepter la connexion dans votre portefeuille.");
+          alert("Connecté avec l'adresse : " + accounts[0]);
+          // Rediriger vers le dashboard après la connexion
+          window.location.href = "dashboard.html";
+        } catch (err) {
+          alert("Connexion refusée !");
         }
       } else {
-        alert("Portefeuille non détecté. Veuillez installer MetaMask ou utiliser WalletConnect.");
+        alert("Aucun portefeuille détecté. Veuillez installer MetaMask ou un wallet compatible.");
       }
     }
   </script>
+
 </body>
-  </html>
-    
+</html>
